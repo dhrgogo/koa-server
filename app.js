@@ -7,11 +7,9 @@ const cors = require('koa2-cors')
 const Router = require('koa-router')
 const staticFile = require('koa-static')
 const Lib = require('./lib/')
-
 for (let name in Lib) {
    App[name] = Lib[name]
 }
-
 
 App.Router = new Router({ prefix: '/' })
 
