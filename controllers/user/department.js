@@ -168,65 +168,54 @@ exports.list = async ctx => {
             [sort, 'DESC']
         ]
     }).then(async data => {
-        // for (let i in data){
-        getTree(8, data)
-
-        // }
-        console.log("----------------dat----", JSON.stringify(dat))
-        // let a = GetData(0, menuArry)
-        // console.log("a",menus)
-
         ctx.body = {
             errorCode: 0,
-            data
+            data:getTree(data)
         }
     }).catch(err => {
         ctx.throw(err)
     })
 }
-var arr = []
-var dat = [{
-    id: 0,
-    children: []
-}]
-arr.push(dat)
 
-function getTree(id, array) {
-    let childrenArr = children(id, array);
-    console.log(childrenArr)
-    for (let i in childrenArr) {
-        tree(childrenArr[i], dat)
-    }
-}
-
-function tree(childrenArr, dat) {
-    for(let i in dat ){
-        if (childrenArr.id === dat[i].id) {
-            dat.push(childrenArr);
-        } else if (dat.children && dat.children.length > 0) {
-            tree(childrenArr, dat.children)
+function getTree(data) {
+    var pos = {};
+    var tree = [];
+    var i = 0;
+    while (data.length != 0) {
+        if (data[i].parentid == 0) {
+            tree.push({
+                id: data[i].id,
+                name: data[i].name,
+                children: []
+            });
+            pos[data[i].id] = [tree.length - 1];
+            data.splice(i, 1);
+            i--;
         } else {
-            if(!dat.children){
-                dat.children = []
-            }
-            dat.children.push(childrenArr);
-        }
-    }
-}
+            var posArr = pos[data[i].parentid];
+            if (posArr != undefined) {
 
-function children(id, Array) {
-    let department = [];
-    for (let i in Array) {
-        if (Array[i].parentid === id) {
-            let db = {
-                id: Array[i].id,
-                parentid: Array[i].parentid,
-                label: Array[i].name,
+                var obj = tree[posArr[0]];
+                for (var j = 1; j < posArr.length; j++) {
+                    obj = obj.children[posArr[j]];
+                }
+
+                obj.children.push({
+                    id: data[i].id,
+                    name: data[i].name,
+                    children: []
+                });
+                pos[data[i].id] = posArr.concat([obj.children.length - 1]);
+                data.splice(i, 1);
+                i--;
             }
-            department.push(db)
+        }
+        i++;
+        if (i > data.length - 1) {
+            i = 0;
         }
     }
-    return department
+    return tree;
 }
 
 exports.update = async ctx => {
