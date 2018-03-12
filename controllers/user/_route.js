@@ -1,5 +1,5 @@
 "use strict"
-const {Router, Middleware: {bankAuth, roleAuth}} = App
+const {Router, Middleware: {bankAuth, roleAuth, logger}} = App
 
 const admin = require('./admin')
 
@@ -7,14 +7,14 @@ const admin = require('./admin')
 /*管理员登录*/
 Router.post('admin/user/', admin.create)
 Router.post('user/login/', admin.login)
-Router.get('user/info/',bankAuth, admin.info)
+Router.get('user/info/', bankAuth, admin.info)
 Router.post('user/logout/', admin.logout)
 
 // 部门操作
 const department = require('./department')
 
-Router.get('department/test',department.test)
-Router.get('department/list',department.list)
+Router.get('department/test', department.test)
+Router.get('department/list', department.list)
 
 Router.post('department/create', bankAuth, department.create)
 
@@ -25,11 +25,11 @@ Router.post('department/create', bankAuth, department.create)
 //用户
 const user = require('./user.js')
 
-Router.get('user/list',bankAuth, user.list)
+Router.get('user/list', bankAuth, user.list)
 
 Router.get('user/details/:id', bankAuth, user.details)
 
-Router.post('user/create',bankAuth, user.create)
+Router.post('user/create', bankAuth, user.create)
 
 Router.put('user/update/:id', user.update)
 
