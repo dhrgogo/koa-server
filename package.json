@@ -20,6 +20,7 @@
     "crypto-js": "^3.1.8",
     "debug": "^2.6.3",
     "fecha": "^2.3.1",
+    "filter-null": "^1.2.0",
     "float-arithmetic": "^1.0.1",
     "gulp": "^3.9.1",
     "gulp-ssh": "^0.7.0",
@@ -47,7 +48,7 @@
     "request-promise": "^4.2.1",
     "sequelize": "^4.22.5",
     "urlencode": "^1.1.0",
-    "validator": "^7.0.0"
+    "validator": "^7.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.8.1"

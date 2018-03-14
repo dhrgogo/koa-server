@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken')
 const md5 = require('MD5')
 const {Config, Models, Helper, ajv} = App
-const {filterNull} = Helper
+const {filterNull,Val} = Helper
 const {Sequelize} = Models
 const {ClientCompany, Department} = Sequelize
 const {Op} = App.sequelize
@@ -122,8 +122,20 @@ exports.create = async ctx => {
 
 }
 exports.test = async ctx => {
+    let { error, data } = Val(ctx.query, {
+            b: {
+                "type": Number,
+                "allowNull": false
+            },
+            a:{
+                "type": Number,
+                "allowNull": false
+            }
+        }
+    )
     ctx.body = {
-        errorCode: 0
+        errorCode: 0,
+        data:data
     }
 }
 exports.list = async ctx => {

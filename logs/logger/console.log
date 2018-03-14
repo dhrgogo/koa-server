@@ -32,3 +32,175 @@ status:200 body:{"errorCode":0,"data":[{"id":2,"name":"111","children":[{"id":4,
 [2018-03-14T16:59:27.378] [ERROR] dhr - test
 [2018-03-14T16:59:42.405] [INFO] dhr - test
 [2018-03-14T16:59:42.407] [ERROR] dhr - test
+[2018-03-14T17:16:22.778] [INFO] dhr - test
+[2018-03-14T17:16:22.782] [ERROR] dhr - test
+[2018-03-14T17:17:02.325] [INFO] dhr - method:GET originalUrl:/department/test query:{} time: 2ms
+
+[2018-03-14T17:17:02.326] [INFO] dhr - method:GET originalUrl:/department/test query:{} time: 2ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:17:30.151] [INFO] dhr - test
+[2018-03-14T17:17:30.153] [ERROR] dhr - test
+[2018-03-14T17:17:33.796] [INFO] dhr - method:GET originalUrl:/department/test query:{} time: 4ms
+
+[2018-03-14T17:17:33.797] [INFO] dhr - method:GET originalUrl:/department/test query:{} time: 4ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:19:11.285] [INFO] dhr - test
+[2018-03-14T17:19:11.288] [ERROR] dhr - test
+[2018-03-14T17:19:41.500] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[666,%201,%2088] query:{"a":"1","b":"[666, 1, 88]"} time: 1ms
+
+[2018-03-14T17:19:41.501] [ERROR] dhr - method:GET originalUrl:/department/test?a=1&b=[666,%201,%2088] query:{"a":"1","b":"[666, 1, 88]"} time: 1ms
+ err name:ReferenceError err message:data is not defined err stack: ReferenceError: data is not defined
+    at exports.test (C:\Users\HYH\Desktop\cms\koa-server\controllers\user\department.js:125:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at app.use (C:\Users\HYH\Desktop\cms\koa-server\app.js:34:15)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa2-cors\dist\index.js:89:15
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at bodyParser (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+[2018-03-14T17:19:41.501] [ERROR] dhr - method:GET originalUrl:/department/test?a=1&b=[666,%201,%2088] query:{"a":"1","b":"[666, 1, 88]"} time: 1ms
+ err name:ReferenceError err message:data is not defined err stack: ReferenceError: data is not defined
+    at exports.test (C:\Users\HYH\Desktop\cms\koa-server\controllers\user\department.js:125:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at app.use (C:\Users\HYH\Desktop\cms\koa-server\app.js:34:15)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa2-cors\dist\index.js:89:15
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at bodyParser (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+[2018-03-14T17:20:00.361] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=aaa query:{"a":"1","b":"aaa"} time: 0ms
+
+[2018-03-14T17:20:00.362] [ERROR] dhr - method:GET originalUrl:/department/test?a=1&b=aaa query:{"a":"1","b":"aaa"} time: 0ms
+ err name:ReferenceError err message:data is not defined err stack: ReferenceError: data is not defined
+    at exports.test (C:\Users\HYH\Desktop\cms\koa-server\controllers\user\department.js:125:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at app.use (C:\Users\HYH\Desktop\cms\koa-server\app.js:34:15)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa2-cors\dist\index.js:89:15
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at bodyParser (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+[2018-03-14T17:20:00.363] [ERROR] dhr - method:GET originalUrl:/department/test?a=1&b=aaa query:{"a":"1","b":"aaa"} time: 0ms
+ err name:ReferenceError err message:data is not defined err stack: ReferenceError: data is not defined
+    at exports.test (C:\Users\HYH\Desktop\cms\koa-server\controllers\user\department.js:125:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at app.use (C:\Users\HYH\Desktop\cms\koa-server\app.js:34:15)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa2-cors\dist\index.js:89:15
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at bodyParser (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+[2018-03-14T17:20:36.905] [INFO] dhr - test
+[2018-03-14T17:20:36.908] [ERROR] dhr - test
+[2018-03-14T17:20:55.377] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 2ms
+
+[2018-03-14T17:20:55.378] [ERROR] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 2ms
+ err name:ReferenceError err message:data is not defined err stack: ReferenceError: data is not defined
+    at exports.test (C:\Users\HYH\Desktop\cms\koa-server\controllers\user\department.js:125:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at app.use (C:\Users\HYH\Desktop\cms\koa-server\app.js:34:15)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa2-cors\dist\index.js:89:15
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at bodyParser (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+[2018-03-14T17:20:55.378] [ERROR] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 2ms
+ err name:ReferenceError err message:data is not defined err stack: ReferenceError: data is not defined
+    at exports.test (C:\Users\HYH\Desktop\cms\koa-server\controllers\user\department.js:125:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:45:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:345:16
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:44:32)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\node_modules\koa-compose\index.js:36:12
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-router\lib\router.js:350:31)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at app.use (C:\Users\HYH\Desktop\cms\koa-server\app.js:34:15)
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa2-cors\dist\index.js:89:15
+    at dispatch (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:42:32)
+    at next (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-compose\index.js:43:18)
+    at bodyParser (C:\Users\HYH\Desktop\cms\koa-server\node_modules\koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:188:7) 
+[2018-03-14T17:21:36.869] [INFO] dhr - test
+[2018-03-14T17:21:36.871] [ERROR] dhr - test
+[2018-03-14T17:21:38.924] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 3ms
+
+[2018-03-14T17:21:38.926] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 3ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:21:59.333] [INFO] dhr - test
+[2018-03-14T17:21:59.336] [ERROR] dhr - test
+[2018-03-14T17:22:02.134] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 3ms
+
+[2018-03-14T17:22:02.135] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 3ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:22:20.215] [INFO] dhr - test
+[2018-03-14T17:22:20.217] [ERROR] dhr - test
+[2018-03-14T17:22:23.232] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 4ms
+
+[2018-03-14T17:22:23.233] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=[1,2] query:{"a":"1","b":"[1,2]"} time: 4ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:22:57.973] [INFO] dhr - test
+[2018-03-14T17:22:57.975] [ERROR] dhr - test
+[2018-03-14T17:23:05.750] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=1 query:{"a":"1","b":"1"} time: 5ms
+
+[2018-03-14T17:23:05.751] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=1 query:{"a":"1","b":"1"} time: 5ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:23:27.048] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=%221%22 query:{"a":"1","b":"\"1\""} time: 0ms
+
+[2018-03-14T17:23:27.049] [INFO] dhr - method:GET originalUrl:/department/test?a=1&b=%221%22 query:{"a":"1","b":"\"1\""} time: 0ms
+status:200 body:{"errorCode":0} 
+[2018-03-14T17:24:45.441] [INFO] dhr - test
+[2018-03-14T17:24:45.443] [ERROR] dhr - test

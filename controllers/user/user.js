@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken')
 const {Config, Models, Helper, ajv, validate} = App
-const {filterNull} = Helper
+const {filterNull,} = Helper
 const {Sequelize} = Models
 const {CustomerUser, User} = Sequelize
 const {Op} = App.sequelize
