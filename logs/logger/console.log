@@ -1,0 +1,34 @@
+[2018-03-12T15:46:34.146] [INFO] dhr - test
+[2018-03-12T15:46:34.149] [ERROR] dhr - test
+[2018-03-12T15:48:26.694] [INFO] dhr - test
+[2018-03-12T15:48:26.697] [ERROR] dhr - test
+[2018-03-12T15:48:30.160] [INFO] dhr - method:GET originalUrl:/department/list query:{"page":1,"limit":100,"sort":"createdAt"} time: 13
+
+[2018-03-12T15:48:30.162] [INFO] dhr - method:GET originalUrl:/department/list query:{"page":1,"limit":100,"sort":"createdAt"} time: 13
+status:200 body:{"errorCode":0,"data":[{"id":2,"name":"111","children":[{"id":4,"name":"宝安部门1","children":[{"id":17,"name":"深圳部门18","children":[]},{"id":6,"name":"宝安部门3","children":[{"id":18,"name":"深圳部门18","children":[]},{"id":8,"name":"宝安部门1","children":[{"id":14,"name":"深圳部门18","children":[]},{"id":13,"name":"深圳部门15","children":[]},{"id":12,"name":"深圳部门14","children":[{"id":16,"name":"深圳部门18","children":[]}]},{"id":11,"name":"深圳部门13","children":[{"id":15,"name":"深圳部门18","children":[]}]},{"id":10,"name":"深圳部门11","children":[]},{"id":9,"name":"深圳部门10","children":[]}]},{"id":7,"name":"宝安部门3","children":[]}]},{"id":5,"name":"宝安部门2","children":[]}]},{"id":3,"name":"222","children":[]}]}]} 
+[2018-03-12T15:48:49.974] [INFO] dhr - test
+[2018-03-12T15:48:49.976] [ERROR] dhr - test
+[2018-03-12T15:50:00.975] [INFO] dhr - test
+[2018-03-12T15:50:00.977] [ERROR] dhr - test
+[2018-03-12T15:50:03.712] [INFO] dhr - method:GET originalUrl:/department/list query:{"page":1,"limit":100,"sort":"createdAt"} time: 13
+
+[2018-03-12T15:50:03.714] [INFO] dhr - method:GET originalUrl:/department/list query:{"page":1,"limit":100,"sort":"createdAt"} time: 13
+status:200 body:{"errorCode":0,"data":[{"id":2,"name":"111","children":[{"id":4,"name":"宝安部门1","children":[{"id":17,"name":"深圳部门18","children":[]},{"id":6,"name":"宝安部门3","children":[{"id":18,"name":"深圳部门18","children":[]},{"id":8,"name":"宝安部门1","children":[{"id":14,"name":"深圳部门18","children":[]},{"id":13,"name":"深圳部门15","children":[]},{"id":12,"name":"深圳部门14","children":[{"id":16,"name":"深圳部门18","children":[]}]},{"id":11,"name":"深圳部门13","children":[{"id":15,"name":"深圳部门18","children":[]}]},{"id":10,"name":"深圳部门11","children":[]},{"id":9,"name":"深圳部门10","children":[]}]},{"id":7,"name":"宝安部门3","children":[]}]},{"id":5,"name":"宝安部门2","children":[]}]},{"id":3,"name":"222","children":[]}]}]} 
+[2018-03-12T15:50:50.284] [INFO] dhr - test
+[2018-03-12T15:50:50.286] [ERROR] dhr - test
+[2018-03-12T15:50:52.496] [INFO] dhr - method:GET originalUrl:/department/list query:{"page":1,"limit":100,"sort":"createdAt"} time: 13ms
+
+[2018-03-12T15:50:52.498] [INFO] dhr - method:GET originalUrl:/department/list query:{"page":1,"limit":100,"sort":"createdAt"} time: 13ms
+status:200 body:{"errorCode":0,"data":[{"id":2,"name":"111","children":[{"id":4,"name":"宝安部门1","children":[{"id":17,"name":"深圳部门18","children":[]},{"id":6,"name":"宝安部门3","children":[{"id":18,"name":"深圳部门18","children":[]},{"id":8,"name":"宝安部门1","children":[{"id":14,"name":"深圳部门18","children":[]},{"id":13,"name":"深圳部门15","children":[]},{"id":12,"name":"深圳部门14","children":[{"id":16,"name":"深圳部门18","children":[]}]},{"id":11,"name":"深圳部门13","children":[{"id":15,"name":"深圳部门18","children":[]}]},{"id":10,"name":"深圳部门11","children":[]},{"id":9,"name":"深圳部门10","children":[]}]},{"id":7,"name":"宝安部门3","children":[]}]},{"id":5,"name":"宝安部门2","children":[]}]},{"id":3,"name":"222","children":[]}]}]} 
+[2018-03-14T16:54:52.734] [INFO] dhr - test
+[2018-03-14T16:54:52.736] [ERROR] dhr - test
+[2018-03-14T16:56:36.181] [INFO] dhr - test
+[2018-03-14T16:56:36.184] [ERROR] dhr - test
+[2018-03-14T16:58:39.038] [INFO] dhr - test
+[2018-03-14T16:58:39.040] [ERROR] dhr - test
+[2018-03-14T16:59:22.737] [INFO] dhr - test
+[2018-03-14T16:59:22.739] [ERROR] dhr - test
+[2018-03-14T16:59:27.377] [INFO] dhr - test
+[2018-03-14T16:59:27.378] [ERROR] dhr - test
+[2018-03-14T16:59:42.405] [INFO] dhr - test
+[2018-03-14T16:59:42.407] [ERROR] dhr - test
