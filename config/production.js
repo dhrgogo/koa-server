@@ -1,6 +1,6 @@
 module.exports = {
-	host: "http://api.bank.hyhit.net/",
-	fileHost: "http://files.bank.hyhit.net/",
+	host: "",
+	fileHost: "",
 	redis: {
 		port: 6379,
 		ip: "127.0.0.1",
