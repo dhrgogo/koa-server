@@ -2,8 +2,8 @@ const jwt = require('jsonwebtoken')
 const md5 = require('MD5')
 const {Config, Models, Helper, ajv} = App
 const {filterNull,Val} = Helper
-const {Sequelize} = Models
-const {ClientCompany, Department} = Sequelize
+const {Sequelize,PG} = Models
+const { Department} = PG
 const {Op} = App.sequelize
 
 exports.create = async ctx => {

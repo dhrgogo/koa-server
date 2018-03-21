@@ -5,10 +5,9 @@ const md5 = require('MD5')
 const {Config, Helper, Models, ajv} = App
 const {bankKye, aesKey} = Config
 const {Validator} = Helper
-const {Sequelize} = Models
-const {BankRole, BankUser, Admin} = Sequelize
+const {Sequelize,PG} = Models
+const {Admin} = PG
 const {Op} = App.sequelize
-
 exports.create = async ctx => {
     let data = ctx.request.body
     const schema = {
@@ -24,7 +23,6 @@ exports.create = async ctx => {
         additionalProperties: false,
         required: ['username', 'password']
     }
-
     const validate = ajv.validate(schema, data)
 
     if (!validate) {

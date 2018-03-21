@@ -12,13 +12,13 @@ const Lib = require('./lib/')
 for (let name in Lib) {
    App[name] = Lib[name]
 }
-App.Router = new Router({ prefix: '/' })
+App.Router = new Router({ prefix: '/dhr/' })
 
 App.Middleware = require('./middleware/')
 
 App.Service = require('./service/')
 
-App.Models.Sequelize = require('./models')
+App.Models = require('./models/')
 
 App.Controllers = require('./controllers')
 
