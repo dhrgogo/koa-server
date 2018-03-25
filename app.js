@@ -16,7 +16,7 @@ App.Router = new Router({ prefix: '/dhr/' })
 
 App.Middleware = require('./middleware/')
 
-App.Service = require('./service/')
+// App.Service = require('./service/')
 
 App.Models = require('./models/')
 
