@@ -8,9 +8,12 @@ module.exports = {
 		options: {}
 	},
 	mongodb: {
-		connurl: 'mongodb://bank:bank20171023@localhost/bank',
+		connurl: 'mongodb://localhost/bank',
 	},
 	postgre: {
-		connurl: 'postgres://bank:bank20171023@localhost:5432/bank',
+		connurl: 'postgres://postgres:dhr@localhost:5432/bank',
+	},
+	mySql: {
+		connurl: 'postgres://postgres:dhr@localhost:5432/bank',
 	},
 }

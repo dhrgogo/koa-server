@@ -238,3 +238,31 @@ status:200 body:{"errorCode":0}
 [2018-03-25T13:07:17.380] [ERROR] dhr - test
 [2018-03-25T13:09:52.142] [INFO] dhr - test
 [2018-03-25T13:09:52.150] [ERROR] dhr - test
+[2019-03-11T14:22:08.774] [INFO] dhr - test
+[2019-03-11T14:22:08.779] [ERROR] dhr - test
+[2019-03-11T14:30:18.234] [INFO] dhr - test
+[2019-03-11T14:30:18.237] [ERROR] dhr - test
+[2019-03-11T14:32:38.248] [INFO] dhr - test
+[2019-03-11T14:32:38.252] [ERROR] dhr - test
+[2019-03-11T14:33:22.523] [INFO] dhr - test
+[2019-03-11T14:33:22.526] [ERROR] dhr - test
+[2019-03-11T14:33:48.687] [INFO] dhr - test
+[2019-03-11T14:33:48.690] [ERROR] dhr - test
+[2019-03-11T14:36:30.739] [INFO] dhr - test
+[2019-03-11T14:36:30.742] [ERROR] dhr - test
+[2019-03-11T14:36:49.625] [INFO] dhr - test
+[2019-03-11T14:36:49.628] [ERROR] dhr - test
+[2019-03-11T14:36:55.162] [INFO] dhr - test
+[2019-03-11T14:36:55.165] [ERROR] dhr - test
+[2019-03-11T14:37:39.653] [INFO] dhr - test
+[2019-03-11T14:37:39.656] [ERROR] dhr - test
+[2019-03-11T14:40:17.000] [INFO] dhr - test
+[2019-03-11T14:40:17.003] [ERROR] dhr - test
+[2019-03-11T14:41:33.283] [INFO] dhr - test
+[2019-03-11T14:41:33.286] [ERROR] dhr - test
+[2019-03-11T14:43:34.482] [INFO] dhr - test
+[2019-03-11T14:43:34.485] [ERROR] dhr - test
+[2019-03-11T14:44:56.039] [INFO] dhr - method:GET originalUrl:/dhr/user/info/test query:{} time: 2ms
+
+[2019-03-11T14:44:56.039] [INFO] dhr - method:GET originalUrl:/dhr/user/info/test query:{} time: 2ms
+status:200 body:{"errorCode":0,"msg":{"b":[666,1,88]}} 

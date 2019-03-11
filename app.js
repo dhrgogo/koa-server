@@ -16,11 +16,14 @@ App.Router = new Router({ prefix: '/dhr/' })
 
 App.Middleware = require('./middleware/')
 
+App.Validator = require('./utils/validate')
+
 // App.Service = require('./service/')
 
 App.Models = require('./models/')
 
-App.Controllers = require('./controllers')
+// App.Controllers = require('./controllers')
+App._router = require('./router')
 
 let app = new Koa()
 
