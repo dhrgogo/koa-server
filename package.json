@@ -38,7 +38,7 @@
     "koa2-cors": "^2.0.3",
     "log4js": "^2.5.3",
     "mkdirp": "^0.5.1",
-    "mongoose": "^4.11.4",
+    "mongoose": "^5.7.5",
     "nodemailer": "^4.2.0",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
