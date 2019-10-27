@@ -2,8 +2,8 @@ const log4js = require('log4js');
 const log_config = require('../config/configLog');
 log4js.configure(log_config);
 const logger = log4js.getLogger('dhr');
-logger.info('test');
-logger.error('test');
+// logger.info('test');
+// logger.error('test');
 var logUtil = {};
  //封装错误日志
 logUtil.logError = function (ctx, error, resTime) {

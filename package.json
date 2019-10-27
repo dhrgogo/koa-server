@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js PORT=3636",
+    "dev": "set NODE_ENV=dev&&nodemon index.js PORT=3636",
     "prd": "pm2 start index.js --name bank -f",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

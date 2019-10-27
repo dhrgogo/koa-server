@@ -266,3 +266,23 @@ status:200 body:{"errorCode":0}
 
 [2019-03-11T14:44:56.039] [INFO] dhr - method:GET originalUrl:/dhr/user/info/test query:{} time: 2ms
 status:200 body:{"errorCode":0,"msg":{"b":[666,1,88]}} 
+[2019-10-27T22:11:16.550] [INFO] dhr - test
+[2019-10-27T22:11:16.556] [ERROR] dhr - test
+[2019-10-27T22:17:43.274] [INFO] dhr - test
+[2019-10-27T22:17:43.280] [ERROR] dhr - test
+[2019-10-27T22:18:25.777] [INFO] dhr - test
+[2019-10-27T22:18:25.782] [ERROR] dhr - test
+[2019-10-27T22:19:05.622] [INFO] dhr - test
+[2019-10-27T22:19:05.627] [ERROR] dhr - test
+[2019-10-27T22:22:49.025] [INFO] dhr - test
+[2019-10-27T22:22:49.033] [ERROR] dhr - test
+[2019-10-27T22:30:07.914] [INFO] dhr - test
+[2019-10-27T22:30:07.920] [ERROR] dhr - test
+[2019-10-27T22:30:26.874] [INFO] dhr - test
+[2019-10-27T22:30:26.880] [ERROR] dhr - test
+[2019-10-27T22:31:24.610] [INFO] dhr - test
+[2019-10-27T22:31:24.616] [ERROR] dhr - test
+[2019-10-27T22:31:49.462] [INFO] dhr - test
+[2019-10-27T22:31:49.469] [ERROR] dhr - test
+[2019-10-27T22:31:57.040] [INFO] dhr - test
+[2019-10-27T22:31:57.046] [ERROR] dhr - test

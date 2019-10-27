@@ -8,7 +8,7 @@ module.exports = {
 		options: {}
 	},
 	mongodb: {
-		connurl: 'mongodb://localhost/bank',
+		connurl: 'mongodb://127.0.0.1:27017/qhw',
 	},
 	postgre: {
 		connurl: 'postgres://postgres:dhr@localhost:5432/bank',
