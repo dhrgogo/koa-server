@@ -1,6 +1,5 @@
 const {Sequelize, sequelize} = App.Sequelize
 const {STRING, INTEGER, ARRAY, TEXT, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} = Sequelize
-const Department = require('./department')
 // 角色权限关联表
 const Permission = require('./permission')
 const Role = require('./role')
@@ -12,6 +11,6 @@ const Role_permission = sequelize.define('Role_permission', {
         defaultValue: 0
     }//状态（0：未删除 1：删除）
 })
-Permission.belongsToMany(Role, {as: 'Role', through: Role_permission, foreignKey: 'role_id'})
-Role.belongsToMany(Permission, {as: 'Permission', through: Role_permission, foreignKey: 'permission_id'})
+Permission.belongsToMany(Role, {as: 'role', through: Role_permission, foreignKey: 'permission_id'})
+Role.belongsToMany(Permission, {as: 'permission', through: Role_permission, foreignKey: 'role_id'})
 module.exports = Role_permission

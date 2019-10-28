@@ -6,9 +6,6 @@ exports.Sequelize = require('./mongodb/mongoLog')
 
 /*--------------------PG----------------------*/
 
-const Admin = require('./sequelize/admin')
-const Department = require('./sequelize/department')
-
 
 const Menu = require('./sequelize/menu')
 const Permission = require('./sequelize/permission')
@@ -22,8 +19,6 @@ sequelize.sync({force: false})
 
 module.exports = {
     PG: {
-        Admin,
-        Department,
         Menu,
         Permission,
         Role,

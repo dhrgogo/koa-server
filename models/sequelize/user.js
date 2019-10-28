@@ -1,8 +1,8 @@
 const {Sequelize, sequelize} = App.Sequelize
 const {STRING, INTEGER, ARRAY, TEXT, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} = Sequelize
-const Department = require('./department')
 //用户表
 const User = sequelize.define('User', {
+    unique_id: {type: INTEGER}, //唯一id
     position: {type: STRING}, //职位
     name: {type: STRING, comment: '姓名'}, //
     english_name: {type: STRING},//

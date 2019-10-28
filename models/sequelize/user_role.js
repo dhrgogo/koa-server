@@ -1,6 +1,5 @@
 const {Sequelize, sequelize} = App.Sequelize
 const {STRING, INTEGER, ARRAY, TEXT, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} = Sequelize
-const Department = require('./department')
 //角色用户关联表
 const User = require('./user')
 const Role = require('./role')
@@ -12,6 +11,6 @@ const User_role = sequelize.define('User_role', {
         defaultValue: 0
     }//状态（0：未删除 1：删除）
 })
-User.belongsToMany(Role, {as: 'Role', through: User_role, foreignKey: 'user_id'})
-Role.belongsToMany(User, {as: 'User', through: User_role, foreignKey: 'role_id'})
+User.belongsToMany(Role, {as: 'role', through: User_role, foreignKey: 'user_id'})
+Role.belongsToMany(User, {as: 'user', through: User_role, foreignKey: 'role_id'})
 module.exports = User_role

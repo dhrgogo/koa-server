@@ -2,7 +2,7 @@ const {Sequelize, sequelize} = App.Sequelize
 const {STRING, INTEGER, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} = Sequelize
 //角色表
 let Role = sequelize.define('Role', {
-    role_id: {type: INTEGER}, // ------------角色ID（自定义）可设置唯一索引UNIQUE
+    unique_id: {type: INTEGER}, //唯一id
     role_name: {type: STRING},// -------角色名称
     roleDesc: {type: STRING},// -------角色描述
     is_deleted: {
