@@ -46,7 +46,7 @@
     "query-string": "^4.3.4",
     "redis": "^2.7.1",
     "request-promise": "^4.2.1",
-    "sequelize": "^4.22.5",
+    "sequelize": "^5.15.1",
     "urlencode": "^1.1.0",
     "validator": "^7.2.0"
   },
