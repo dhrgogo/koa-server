@@ -2,12 +2,23 @@
 const {Router, Middleware: {bankAuth, roleAuth, logger}} = App
 
 const test = require('../controllers/test')
+const User = require('../controllers/user/user')
 
 // /*管理员创建*/
 // /*管理员登录*/
 // Router.post('admin/user/', admin.create)
 // Router.post('user/login/', admin.login)
-Router.get('user/info/test', test.create)
+Router.post('user', User.informationCreate)
+Router.put('user', User.informationUpdate)
+Router.get('user', User.informationList)
+Router.delete('user', User.userDelete)
+Router.get('user/info', test.getlist)
+Router.get('transaction/list', test.transactionList)
+// Router.post('user/login', test.create)
+// Router.post('user/login', test.create)
+// Router.post('user/login', test.create)
+// Router.post('user/login', test.create)
+// Router.post('user/login', test.create)
 // Router.post('user/logout/', admin.logout)
 //
 // // 部门操作

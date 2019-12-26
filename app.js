@@ -30,18 +30,35 @@ let app = new Koa()
 app.use(bodyParser({ enableTypes: ['json', 'form', 'text'] }))
 
 app.use(cors())
-app.use(async (ctx, next) => {
-    const start = new Date();
-    var ms;
+// app.use(async (ctx, next) => {
+//     const start = new Date();
+//     var ms;
+//     try {
+//         await next();
+//         ms = new Date() - start;
+//         logUtil.logResponse(ctx, ms);
+//     } catch (error) {
+//         ms = new Date() - start;
+//         logUtil.logError(ctx, error, ms);
+//     }
+//
+// });
+app.use(async(ctx, next) => {
     try {
+        ctx.error = (code, message) => {
+            if (typeof code === 'string') {
+                message = code;
+                code = 500;
+            }
+            ctx.throw(code || 500, message || '服务器错误');
+        };
         await next();
-        ms = new Date() - start;
-        logUtil.logResponse(ctx, ms);
-    } catch (error) {
-        ms = new Date() - start;
-        logUtil.logError(ctx, error, ms);
+    } catch (e) {
+        let ErrCode = e.status || 500;
+        let ErrMsg = e.message || '服务器错误';
+        ctx.response.body = { ErrCode, ErrMsg };
+        
     }
-
 });
 app.use(App.Router.routes())
 

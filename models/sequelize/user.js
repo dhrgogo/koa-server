@@ -5,6 +5,7 @@ const User = sequelize.define('User', {
     unique_id: {type: INTEGER}, //唯一id
     position: {type: STRING}, //职位
     name: {type: STRING, comment: '姓名'}, //
+    password: {type: STRING, comment: '密码'}, //
     english_name: {type: STRING},//
     phone: {
         type: STRING,
@@ -24,6 +25,7 @@ const User = sequelize.define('User', {
         }
     },
     user_img: {type: STRING},
+    mixin: {type: INTEGER},
     is_deleted: {
         type: INTEGER,
         defaultValue: 0

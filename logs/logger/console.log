@@ -286,3 +286,395 @@ status:200 body:{"errorCode":0,"msg":{"b":[666,1,88]}}
 [2019-10-27T22:31:49.469] [ERROR] dhr - test
 [2019-10-27T22:31:57.040] [INFO] dhr - test
 [2019-10-27T22:31:57.046] [ERROR] dhr - test
+[2019-10-29T15:46:24.468] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"password":"1111111111","username":"admin"} time: 2ms
+
+[2019-10-29T15:46:24.472] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"password":"1111111111","username":"admin"} time: 2ms
+status:200 body:{"code":20000,"data":{"token":"admin-token"}} 
+[2019-10-29T15:46:38.722] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"password":"1111111111","username":"admin"} time: 2ms
+
+[2019-10-29T15:46:38.727] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"password":"1111111111","username":"admin"} time: 2ms
+status:200 body:{"code":20000111,"data":{"token":"admin-token"}} 
+[2019-10-29T15:47:03.176] [INFO] dhr - method:GET originalUrl:/ query:{} time: 9ms
+
+[2019-10-29T15:47:03.177] [INFO] dhr - method:GET originalUrl:/ query:{} time: 9ms
+status:404 body:undefined 
+[2019-10-29T15:47:03.272] [INFO] dhr - method:GET originalUrl:/favicon.ico query:{} time: 1ms
+
+[2019-10-29T15:47:03.273] [INFO] dhr - method:GET originalUrl:/favicon.ico query:{} time: 1ms
+status:404 body:undefined 
+[2019-10-29T15:47:08.562] [INFO] dhr - method:GET originalUrl:/ query:{} time: 2ms
+
+[2019-10-29T15:47:08.569] [INFO] dhr - method:GET originalUrl:/ query:{} time: 2ms
+status:404 body:undefined 
+[2019-10-29T15:47:42.831] [INFO] dhr - method:GET originalUrl:/ query:{} time: 18ms
+
+[2019-10-29T15:47:42.866] [INFO] dhr - method:GET originalUrl:/ query:{} time: 18ms
+status:404 body:undefined 
+[2019-10-29T15:47:43.740] [INFO] dhr - method:GET originalUrl:/ query:{} time: 2ms
+
+[2019-10-29T15:47:43.746] [INFO] dhr - method:GET originalUrl:/ query:{} time: 2ms
+status:404 body:undefined 
+[2019-10-29T15:52:04.376] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 8ms
+
+[2019-10-29T15:52:04.381] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 8ms
+status:404 body:undefined 
+[2019-10-29T15:52:04.386] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+
+[2019-10-29T15:52:04.387] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+status:404 body:undefined 
+[2019-10-29T15:52:17.540] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"username":"admin","password":"1111111111"} time: 1ms
+
+[2019-10-29T15:52:17.542] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"username":"admin","password":"1111111111"} time: 1ms
+status:200 body:{"code":20000,"data":{"token":"admin-token"}} 
+[2019-10-29T15:52:17.561] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T15:52:17.563] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:404 body:undefined 
+[2019-10-29T15:52:30.503] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"username":"admin","password":"1111111111"} time: 0ms
+
+[2019-10-29T15:52:30.505] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"username":"admin","password":"1111111111"} time: 0ms
+status:200 body:{"code":20000,"data":{"token":"admin-token"}} 
+[2019-10-29T15:52:30.529] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+
+[2019-10-29T15:52:30.531] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+status:404 body:undefined 
+[2019-10-29T16:02:52.609] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 2ms
+
+[2019-10-29T16:02:52.613] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 2ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:06:17.101] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T16:06:17.104] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:06:29.985] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T16:06:29.987] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:21:15.057] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 2ms
+
+[2019-10-29T16:21:15.063] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 2ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"},{"order_no":"87F17C1f-CfFE-3EDf-87F8-EeaeBF4Bcaf0","timestamp":1183916679954,"username":"Donald Jones"}],"total":20}} 
+[2019-10-29T16:27:12.140] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 2ms
+
+[2019-10-29T16:27:12.145] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 2ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:27:12.155] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T16:27:12.158] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:27:12.849] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+
+[2019-10-29T16:27:12.851] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"}],"total":20}} 
+[2019-10-29T16:27:12.944] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+
+[2019-10-29T16:27:12.946] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"}],"total":20}} 
+[2019-10-29T16:27:40.384] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+
+[2019-10-29T16:27:40.386] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:27:41.022] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+
+[2019-10-29T16:27:41.025] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"}],"total":20}} 
+[2019-10-29T16:28:41.370] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T16:28:41.373] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T16:28:42.042] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 1ms
+
+[2019-10-29T16:28:42.045] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 1ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"}],"total":20}} 
+[2019-10-29T16:29:26.815] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/article/list query:{} time: 8ms
+
+[2019-10-29T16:29:26.818] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/article/list query:{} time: 8ms
+status:404 body:undefined 
+[2019-10-29T17:03:42.686] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"username":"admin","password":"1111111111"} time: 0ms
+
+[2019-10-29T17:03:42.688] [INFO] dhr - method:POST originalUrl:/dev-api-dhr/user/login body:{"username":"admin","password":"1111111111"} time: 0ms
+status:200 body:{"code":20000,"data":{"token":"admin-token"}} 
+[2019-10-29T17:03:42.714] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+
+[2019-10-29T17:03:42.715] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 1ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T17:03:43.431] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+
+[2019-10-29T17:03:43.436] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"}],"total":20}} 
+[2019-10-29T17:04:03.976] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/routes query:{} time: 1ms
+
+[2019-10-29T17:04:03.978] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/routes query:{} time: 1ms
+status:404 body:undefined 
+[2019-10-29T17:04:03.980] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/roles query:{} time: 5ms
+
+[2019-10-29T17:04:03.982] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/roles query:{} time: 5ms
+status:404 body:undefined 
+[2019-10-29T17:05:01.404] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T17:05:01.407] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T17:05:01.793] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T17:05:01.795] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T17:05:02.081] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+
+[2019-10-29T17:05:02.083] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/transaction/list query:{} time: 0ms
+status:200 body:{"code":20000,"data":{"items":[{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"},{"order_no":"7421dddB-51cc-C469-1385-C6ebcef0e46D","price":6021,"status":"pending","timestamp":1183916679954,"username":"Paul Lee"}],"total":20}} 
+[2019-10-29T17:05:12.428] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+
+[2019-10-29T17:05:12.430] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/user/info?token=admin-token query:{"token":"admin-token"} time: 0ms
+status:200 body:{"code":20000,"data":{"avatar":"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif","introduction":"I am a super administrator","name":"Super Admin","roles":["admin"]}} 
+[2019-10-29T17:05:16.958] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/routes query:{} time: 1ms
+
+[2019-10-29T17:05:16.960] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/routes query:{} time: 1ms
+status:404 body:undefined 
+[2019-10-29T17:05:16.963] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/roles query:{} time: 1ms
+
+[2019-10-29T17:05:16.965] [INFO] dhr - method:GET originalUrl:/dev-api-dhr/roles query:{} time: 1ms
+status:404 body:undefined 
+[2019-12-26T15:11:07.084] [INFO] dhr - method:GET originalUrl:/user query:{} time: 7ms
+
+[2019-12-26T15:11:07.086] [INFO] dhr - method:GET originalUrl:/user query:{} time: 7ms
+status:404 body:undefined 
+[2019-12-26T15:21:46.250] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+
+[2019-12-26T15:21:46.253] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+status:404 body:undefined 
+[2019-12-26T15:22:41.968] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+
+[2019-12-26T15:22:41.971] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+status:404 body:undefined 
+[2019-12-26T15:22:53.381] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 0ms
+
+[2019-12-26T15:22:53.382] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 0ms
+status:404 body:undefined 
+[2019-12-26T15:26:36.799] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+
+[2019-12-26T15:26:36.801] [INFO] dhr - method:POST originalUrl:/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+status:404 body:undefined 
+[2019-12-26T15:27:19.128] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 4ms
+
+[2019-12-26T15:27:19.129] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 4ms
+ err name:ReferenceError err message:Validator is not defined err stack: ReferenceError: Validator is not defined
+    at exports.informationCreate (C:\Users\dhr\Desktop\admin\koa-server\controllers\user\user.js:106:13)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at app.use (C:\Users\dhr\Desktop\admin\koa-server\app.js:37:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at cors (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at bodyParser (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7) 
+[2019-12-26T15:27:19.130] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 4ms
+ err name:ReferenceError err message:Validator is not defined err stack: ReferenceError: Validator is not defined
+    at exports.informationCreate (C:\Users\dhr\Desktop\admin\koa-server\controllers\user\user.js:106:13)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at app.use (C:\Users\dhr\Desktop\admin\koa-server\app.js:37:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at cors (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at bodyParser (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7) 
+[2019-12-26T15:28:34.816] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 5ms
+
+[2019-12-26T15:28:34.820] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 5ms
+status:200 body:{"ErrCode":1000,"ErrMsg":"密码格式错误"} 
+[2019-12-26T15:29:11.786] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":18503083260} time: 0ms
+
+[2019-12-26T15:29:11.787] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":18503083260} time: 0ms
+status:200 body:{"ErrCode":1000,"ErrMsg":"密码必须为字符串"} 
+[2019-12-26T15:29:18.343] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+
+[2019-12-26T15:29:18.345] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"18503083260"} time: 1ms
+status:200 body:{"ErrCode":1000,"ErrMsg":"密码格式错误"} 
+[2019-12-26T15:29:32.340] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 3ms
+
+[2019-12-26T15:29:32.341] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 3ms
+ err name:ReferenceError err message:md5 is not defined err stack: ReferenceError: md5 is not defined
+    at exports.informationCreate (C:\Users\dhr\Desktop\admin\koa-server\controllers\user\user.js:150:5)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at app.use (C:\Users\dhr\Desktop\admin\koa-server\app.js:37:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at cors (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at bodyParser (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7) 
+[2019-12-26T15:29:32.346] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 3ms
+ err name:ReferenceError err message:md5 is not defined err stack: ReferenceError: md5 is not defined
+    at exports.informationCreate (C:\Users\dhr\Desktop\admin\koa-server\controllers\user\user.js:150:5)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at next (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:45:18)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:346:16
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:44:32)
+    at C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@3.2.1@koa-compose\index.js:36:12
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-router@7.4.0@koa-router\lib\router.js:351:31)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at app.use (C:\Users\dhr\Desktop\admin\koa-server\app.js:37:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at cors (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa2-cors@2.0.6@koa2-cors\dist\index.js:91:15)
+    at dispatch (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-compose@4.1.0@koa-compose\index.js:42:32)
+    at bodyParser (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_koa-bodyparser@4.2.1@koa-bodyparser\index.js:86:11)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7) 
+[2019-12-26T15:30:20.374] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 18ms
+
+[2019-12-26T15:30:20.376] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 18ms
+ err name:SequelizeDatabaseError err message:关系 "Users" 的 "password" 字段不存在 err stack: SequelizeDatabaseError: 关系 "Users" 的 "password" 字段不存在
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:363:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:30:20.377] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 18ms
+ err name:SequelizeDatabaseError err message:关系 "Users" 的 "password" 字段不存在 err stack: SequelizeDatabaseError: 关系 "Users" 的 "password" 字段不存在
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:363:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:30:21.975] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 6ms
+
+[2019-12-26T15:30:21.976] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 6ms
+ err name:SequelizeDatabaseError err message:关系 "Users" 的 "password" 字段不存在 err stack: SequelizeDatabaseError: 关系 "Users" 的 "password" 字段不存在
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:363:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:30:21.977] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 6ms
+ err name:SequelizeDatabaseError err message:关系 "Users" 的 "password" 字段不存在 err stack: SequelizeDatabaseError: 关系 "Users" 的 "password" 字段不存在
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:363:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:30:33.966] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 5ms
+
+[2019-12-26T15:30:33.966] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 5ms
+ err name:SequelizeDatabaseError err message:关系 "Users" 的 "password" 字段不存在 err stack: SequelizeDatabaseError: 关系 "Users" 的 "password" 字段不存在
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:363:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:30:33.971] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 5ms
+ err name:SequelizeDatabaseError err message:关系 "Users" 的 "password" 字段不存在 err stack: SequelizeDatabaseError: 关系 "Users" 的 "password" 字段不存在
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:363:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:31:24.955] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 20ms
+
+[2019-12-26T15:31:24.957] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 20ms
+status:200 body:{"ErrCode":"0000","Result":{"is_deleted":0,"id":1,"phone":"18503083260","password":"01677C74D75A9A80492D3AEB5EFE1BAC","mixin":9467,"updatedAt":"2019-12-26T07:31:24.942Z","createdAt":"2019-12-26T07:31:24.942Z","unique_id":null,"position":null,"name":null,"english_name":null,"department":null,"order":null,"sex":null,"email":null,"user_img":null},"msg":"创建成功"} 
+[2019-12-26T15:31:28.696] [INFO] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 10ms
+
+[2019-12-26T15:31:28.696] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 10ms
+ err name:SequelizeUniqueConstraintError err message:重复键违反唯一约束"Users_phone_key" err stack: SequelizeUniqueConstraintError: 重复键违反唯一约束"Users_phone_key"
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:328:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
+[2019-12-26T15:31:28.698] [ERROR] dhr - method:POST originalUrl:/dhr/user body:{"phone":"18503083260","password":"a18503083260"} time: 10ms
+ err name:SequelizeUniqueConstraintError err message:重复键违反唯一约束"Users_phone_key" err stack: SequelizeUniqueConstraintError: 重复键违反唯一约束"Users_phone_key"
+    at Query.formatError (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:328:16)
+    at query.catch.err (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_sequelize@4.44.3@sequelize\lib\dialects\postgres\query.js:86:18)
+    at tryCatcher (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\util.js:16:23)
+    at Promise._settlePromiseFromHandler (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:547:31)
+    at Promise._settlePromise (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:604:18)
+    at Promise._settlePromise0 (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:649:10)
+    at Promise._settlePromises (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\promise.js:725:18)
+    at _drainQueueStep (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:93:12)
+    at _drainQueue (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:86:9)
+    at Async._drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:102:5)
+    at Immediate.Async.drainQueues (C:\Users\dhr\Desktop\admin\koa-server\node_modules\_bluebird@3.7.1@bluebird\js\release\async.js:15:14)
+    at runCallback (timers.js:810:20)
+    at tryOnImmediate (timers.js:768:5)
+    at processImmediate [as _immediateCallback] (timers.js:745:5) 
