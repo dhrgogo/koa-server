@@ -1,7 +1,7 @@
 module.exports = {
-   clientKey: '',//
-   aesKey: '',//
-   bankKye: '',//
+   clientKey: 'dhr',//
+   aesKey: 'dhr',//
+   bankKye: 'dhr',//
    redis: {
       port: 6379,
       ip: "127.0.0.1",

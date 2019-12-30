@@ -29,7 +29,7 @@ let app = new Koa()
 
 app.use(bodyParser({ enableTypes: ['json', 'form', 'text'] }))
 
-app.use(cors())
+// app.use(cors())
 // app.use(async (ctx, next) => {
 //     const start = new Date();
 //     var ms;
@@ -43,6 +43,30 @@ app.use(cors())
 //     }
 //
 // });
+// app.use(async (ctx, next) => {
+//     console.log("ctx.request.header.origin：", ctx.request.header.origin)
+//     console.log("ctx.origin：", ctx.origin)
+//     // let reg = RegExp(/prettycode/);
+//     // ctx.request.header.origin.match(reg)
+//     if (ctx.request.header.origin && ctx.request.header.origin.match(reg)) {
+//         await next();
+//     } else {
+//         if (ctx.request.header.origin !== ctx.origin) {
+//             ctx.set('Access-Control-Allow-Origin', ctx.request.header.origin);
+//             ctx.set('Access-Control-Allow-Credentials', true);
+//             ctx.set('Access-Control-Allow-Headers', 'Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With, Authorization,authorization');
+//         }
+//         await next();
+//     }
+// });
+// app.use(async (ctx, next) => {
+//     if (ctx.method === 'OPTIONS') {
+//         ctx.set('Access-Control-Allow-Methods', 'PUT,DELETE,POST,GET');
+//         ctx.set('Access-Control-Max-Age', 3600 * 24);
+//         ctx.body = '';
+//     }
+//     await next();
+// });
 app.use(async(ctx, next) => {
     try {
         ctx.error = (code, message) => {
@@ -54,10 +78,9 @@ app.use(async(ctx, next) => {
         };
         await next();
     } catch (e) {
-        let ErrCode = e.status || 500;
-        let ErrMsg = e.message || '服务器错误';
+        let ErrCode = e.status || e.ErrCode || 500;
+        let ErrMsg = e.message || e.ErrMsg || '服务器错误';
         ctx.response.body = { ErrCode, ErrMsg };
-        
     }
 });
 app.use(App.Router.routes())

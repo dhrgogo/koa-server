@@ -3,84 +3,9 @@ const CryptoJS = require('crypto-js')
 const { Config:{ aesKey,bankKye },Models,Validator,FilterNull } = App
 const { Sequelize,PG } = Models
 const md5 = require('MD5')
-const { User,User_role,Role } = PG
+const { User,User_role,Role, Permission } = PG
 const { Op } = App.sequelize
 
-exports.post_login = async ctx => {
-	let json = ctx.request.body
-	var { error,data } = Validator(json,{
-		"phone":{
-			"type":'MobilePhone',
-			"name":"账号",
-			"allowNull":false
-			// "type": String,
-			// "name": "账号",
-			// "reg": /^(\+?0?86\-?)?1[3456789]\d{9}$/,
-			// "allowNull": false
-		},
-		"password":{
-			"type":String,
-			"name":"密码",
-			"minLength":8,
-			"maxLength":18,
-			"reg":/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]{6,20})$/,
-			"allowNull":false
-		}
-	})
-	if ( error ) {
-		ctx.body = {
-			ErrCode:1000,
-			ErrMsg:error
-		}
-		return;
-	}
-	let { phone,password,type } = data
-	let where = FilterNull({
-		phone:phone,
-		// type: type === 1 ? {[Op.in]: [1, 2, 3, 4]} : type
-	})
-	let user = await User.find({
-		where:where
-	}).catch(err => {
-		ctx.throw(err)
-	})
-	if ( !user ) {
-		ctx.body = {
-			ErrCode:1000,
-			ErrMsg:'用户不存在'
-		}
-		return;
-	}
-	password = md5(`${ password }${ user.mixin }`).toUpperCase()
-	if ( password !== user.password ) {
-		ctx.body = {
-			ErrCode:1000,
-			ErrMsg:'密码错误'
-		}
-		return;
-	}
-	const time = 3600 * 24 * 60
-	// const time = 60
-	const random = Math.random().toString().slice(-5,-1)
-	const encryptKey = CryptoJS.AES.encrypt(random,aesKey).toString()
-	const token = jwt.sign({
-		uid:user.id,
-		username:user.name,
-		key:encryptKey
-	},random + bankKye,{ expiresIn:time })
-	let db = {
-		id:user.id,
-		username:user.name || "",
-		phone:user.phone,
-	}
-	db.token = token
-	ctx.body = {
-		ErrCode:"0000",
-		Result:db,
-		msg:'登录成功'
-	}
-	return
-}
 exports.informationCreate = async ctx => {
 	
 	let json = ctx.request.body
@@ -123,7 +48,6 @@ exports.informationCreate = async ctx => {
 		ctx.throw(err)
 	})
 };
-
 exports.informationUpdate = async ctx => {
 	let json = ctx.request.body
 	let id = ctx.params.id
@@ -291,8 +215,7 @@ exports.informationList = async ctx => {
 	//     ctx.throw(err)
 	// })
 }
-
-exports.userDelete = async ctx => {
+exports.Delete = async ctx => {
 	let json = ctx.params
 	let { error,data } = Validator(json,{
 		"id":{
@@ -333,7 +256,7 @@ exports.userDelete = async ctx => {
 		ctx.throw(err)
 	})
 }
-exports.userRoleCreate = async ctx => {
+exports.userPermissionCreate = async ctx => {
 	let json = ctx.request.body
 	let { error,data } = Validator(json,{
 		"user_id":{
@@ -365,7 +288,7 @@ exports.userRoleCreate = async ctx => {
 		ctx.throw(err)
 	})
 }
-exports.userRoleUpdate = async ctx => {
+exports.userPermissionUpdate = async ctx => {
 	let user_id = ctx.params.user_id
 	let json = ctx.request.body
 	let { error,data } = Validator(json,{
@@ -396,7 +319,7 @@ exports.userRoleUpdate = async ctx => {
 		ctx.throw(err)
 	})
 }
-exports.userRoleList = async ctx => {
+exports.userPermissionList = async ctx => {
 	let json = ctx.request.query
 	let { error,data } = Validator(json,{
 		"user_id":{
