@@ -13,10 +13,6 @@ exports.post_login = async ctx => {
 			"type":'MobilePhone',
 			"name":"账号",
 			"allowNull":false
-			// "type": String,
-			// "name": "账号",
-			// "reg": /^(\+?0?86\-?)?1[3456789]\d{9}$/,
-			// "allowNull": false
 		},
 		"password":{
 			"type":String,
@@ -229,67 +225,6 @@ exports.informationList = async ctx => {
 		}
 		return;
 	}
-	// let {account, password, typeOf, merchant_id} = data
-	// if (!data.typeOf) {
-	//     let cacheMsg = await Cache.findOne({account: account, svgCode: data.svgCode.toUpperCase()})
-	//     if (!cacheMsg) {
-	//         ctx.body = {
-	//             ErrCode: 1000,
-	//             ErrMsg: "输入的账号不正确"
-	//         }
-	//         return;
-	//     }
-	//     if (cacheMsg.svgCode.toUpperCase() !== data.svgCode.toUpperCase()) {
-	//         ctx.body = {
-	//             ErrCode: 1000,
-	//             ErrMsg: "图片验证码错误"
-	//         }
-	//         return;
-	//     }
-	//     if (parseInt(cacheMsg.CodeNum) !== parseInt(data.CodeNum)) {
-	//         ctx.body = {
-	//             ErrCode: 1000,
-	//             ErrMsg: "短信验证码错误"
-	//         }
-	//         return;
-	//     }
-	// }
-	// let user = await MerchantUser.findOne({
-	//     where: {
-	//         account: data.account
-	//     }
-	// })
-	//
-	// if (!user) {
-	//     ctx.body = {
-	//         ErrCode: 1000,
-	//         ErrMsg: '用户不存在'
-	//     }
-	//     return
-	// }
-	// data.mixin = Math.random().toString().slice(-5, -1)
-	// data.password = md5(`${data.password}${data.mixin}`).toUpperCase()
-	// data.originPassword = password
-	// data.phone = account
-	// // data.type = typeOf  // typeOf = 0 商户
-	// let created_Merchant
-	// await MerchantUser.update(data, {where: {account: account}}).then(user => {
-	//     if (user[0]) {
-	//         ctx.body = {
-	//             ErrCode: "0000",
-	//             Result: user,
-	//             msg: '修改密码成功'
-	//         }
-	//     } else {
-	//         ctx.body = {
-	//             ErrCode: "1000",
-	//             ErrMsg: user,
-	//             msg: '修改密码失败'
-	//         }
-	//     }
-	// }).catch(err => {
-	//     ctx.throw(err)
-	// })
 }
 
 exports.userDelete = async ctx => {
@@ -419,15 +354,15 @@ exports.userRoleList = async ctx => {
 			user_id:user_id
 		})
 	}
-	await User_role.findAll({
+	await User.findAll({
 		where:where,
+		attributes:[ 'id','position','name','phone','department','sex','email','user_img' ],
 		include:[ {
 			model:Role,
-			as:'role'
-		},{
-			model:User,
-			as:'user'
-		} ],
+			as:'role',
+			attributes:[ 'id','role_name' ]
+		}
+		],
 	}).then(db => {
 		ctx.body = {
 			ErrCode:0,

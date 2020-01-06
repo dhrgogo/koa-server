@@ -1,26 +1,46 @@
 const { Config:{ aesKey,bankKye },Models,Validator,FilterNull } = App
 const { Sequelize,PG } = Models
 const md5 = require('MD5')
-const { User,User_role,Role,Permission,Role_permission } = PG
+const { User,User_role,Role,Menu,Role_permission,Menu } = PG
 const { Op } = App.sequelize
 
 exports.informationCreate = async ctx => {
 	let json = ctx.request.body
 	let { error,data } = Validator(json,{
-		"parent_id":{
-			"type":Number,
-			"name":"父级id",
+		"menu":{
+			"type":String,
+			"name":"名称",
 			"allowNull":false
 		},
-		"permission_name":{
+		"url":{
 			"type":String,
-			"name":"权限名",
+			"name":"路径",
 			"allowNull":false
 		},
-		"permissionDesc":{
+		"style":{
 			"type":String,
+			"name":"样式",
 			"allowNull":true
 		},
+		"sort":{
+			"type":Number,
+			"allowNull":true
+		},
+		"role_id":{
+			"type":Number,
+			"default":0,
+			"allowNull":true
+		},
+		"parent_id":{
+			"type":Number,
+			"default":0,
+			"allowNull":true
+		},
+		"permission_id":{
+			"type":Number,
+			"default":0,
+			"allowNull":true
+		}
 	})
 	if ( error ) {
 		ctx.body = {
@@ -29,14 +49,14 @@ exports.informationCreate = async ctx => {
 		}
 		return;
 	}
-	let { parent_id,permission_name,permissionDesc } = data
-	let where = FilterNull({
-		parent_id:parent_id,
-		permission_name:permission_name,
-		permissionDesc:permissionDesc,
-		// type: type === 1 ? {[Op.in]: [1, 2, 3, 4]} : type
-	})
-	await Permission.create(data).then(db => {
+	// let { parent_id, permission_name, permissionDesc } = data
+	// let where = FilterNull({
+	// 	parent_id:parent_id,
+	// 	permission_name:permission_name,
+	// 	permissionDesc:permissionDesc,
+	// 	// type: type === 1 ? {[Op.in]: [1, 2, 3, 4]} : type
+	// })
+	await Menu.create(data).then(db => {
 		ctx.body = {
 			ErrCode:"0000",
 			Result:"",
@@ -50,18 +70,40 @@ exports.informationUpdate = async ctx => {
 	let id = ctx.params.id
 	let json = ctx.request.body
 	let { error,data } = Validator(json,{
-		"parent_id":{
-			"type":Number,
-			"name":"父级id"
-		},
-		"permission_name":{
+		"menu":{
 			"type":String,
-			"name":"权限名称"
+			"name":"名称",
+			"allowNull":false
 		},
-		"permissionDesc":{
+		"url":{
 			"type":String,
+			"name":"路径",
+			"allowNull":false
+		},
+		"style":{
+			"type":String,
+			"name":"样式",
 			"allowNull":true
 		},
+		"sort":{
+			"type":Number,
+			"allowNull":true
+		},
+		"role_id":{
+			"type":Number,
+			"default":0,
+			"allowNull":true
+		},
+		"parent_id":{
+			"type":Number,
+			"default":0,
+			"allowNull":true
+		},
+		"permission_id":{
+			"type":Number,
+			"default":0,
+			"allowNull":true
+		}
 	})
 	if ( error ) {
 		ctx.body = {
@@ -70,13 +112,11 @@ exports.informationUpdate = async ctx => {
 		}
 		return;
 	}
-	let { parent_id,permission_name,permissionDesc } = data
-	// let where = FilterNull({
-	// 	// 	parent_id:parent_id,
-	// 	// 	permission_name:permission_name,
-	// 	// 	permissionDesc:permissionDesc,
-	// 	// })
-	await Permission.update({ data,where:{ id:id } }).then(db => {
+	// let { parent_id,permission_name,permissionDesc } = data
+	let where = FilterNull({
+		id:id
+	})
+	await Menu.update({ data , where: where}).then(db => {
 		ctx.body = {
 			ErrCode:"0000",
 			Result:"",
@@ -87,7 +127,7 @@ exports.informationUpdate = async ctx => {
 	})
 }
 exports.informationList = async ctx => {
-	await Permission.findAll({}).then(db => {
+	await Menu.findAll({}).then(db => {
 		ctx.body = {
 			ErrCode:'0000',
 			ErrMsg:db
@@ -344,7 +384,7 @@ exports.rolePermissionList = async ctx => {
 			// 	attributes: ['createdAt']
 			// }
 		},{
-			model:Permission,
+			model:Menu,
 			as:'permission',
 			attributes:{ exclude:[ 'createdAt' ] }
 			// through: {
