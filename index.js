@@ -12,7 +12,7 @@ let NODE_ENV = process.env.NODE_ENV || 'prd'
 // 环境变量
 if (NODE_ENV === 'prd') {
    NODE_ENV = 'production'
-} else if (NODE_ENV === 'dev') {
+} else if (NODE_ENV === 'development') {
    NODE_ENV = 'development'
 }
 let parser = argv('PORT', 'NODE_ENV')

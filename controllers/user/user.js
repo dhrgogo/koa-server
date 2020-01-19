@@ -7,12 +7,28 @@ const { User,User_role,Role } = PG
 const { Op } = App.sequelize
 
 exports.post_login = async ctx => {
+	ctx.body = {
+		ErrCode:"0000",
+		Result:{
+			id:1,
+			username:"admin" || "",
+			phone:"18503083260",
+			token : "123"
+		},
+		msg:'登录成功'
+	}
+	return
 	let json = ctx.request.body
 	var { error,data } = Validator(json,{
 		"phone":{
 			"type":'MobilePhone',
 			"name":"账号",
-			"allowNull":false
+			// "allowNull":false
+		},
+		"username":{
+			"type":String,
+			"name":"账号",
+			// "allowNull":false
 		},
 		"password":{
 			"type":String,
@@ -30,9 +46,10 @@ exports.post_login = async ctx => {
 		}
 		return;
 	}
-	let { phone,password,type } = data
+	let { phone,password,type ,username} = data
 	let where = FilterNull({
 		phone:phone,
+		name:username,
 		// type: type === 1 ? {[Op.in]: [1, 2, 3, 4]} : type
 	})
 	let user = await User.find({

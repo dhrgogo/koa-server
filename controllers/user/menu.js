@@ -1,7 +1,7 @@
 const { Config:{ aesKey,bankKye },Models,Validator,FilterNull } = App
 const { Sequelize,PG } = Models
 const md5 = require('MD5')
-const { User,User_role,Role,Menu,Role_permission,Menu } = PG
+const { User,User_role,Role,Menu,Role_permission } = PG
 const { Op } = App.sequelize
 
 exports.informationCreate = async ctx => {
