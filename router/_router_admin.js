@@ -24,16 +24,19 @@ Router.post('admin/info/', Admin.postInfo)
 // 管理员信息
 Router.get('admin/info/', Admin.adminInfo)
 Router.post('admin/register/', Admin.adminRegister)
-Router.post('/admin/update/:id', Admin.adminUpdate)
+Router.post('admin/update/:id', Admin.adminUpdate)
 // 管理员列表
 Router.get('admin/list/', Admin.adminList)
 // Router.post('admin/list/', Admin.adminList)
 // Router.post('admin/list/', Admin.adminList)
 // 菜单列表
 Router.get('menu/treeList/', Admin.menuTreeList)
+Router.get('menu/list/', Admin.menuList)
 Router.post('menu/create/', Admin.menuCreate)
 Router.post('menu/update/:id', Admin.menuUpdate)
 // 角色列表
-Router.get('role/list/', Admin.rolelist)
+Router.get('role/list/', Admin.roleList)
+Router.post('role/create/', Admin.roleCreate)
+Router.post('role/update/:id', Admin.roleUpdate)
 
 Router.get('role/listAll/', Admin.rolelistAll)

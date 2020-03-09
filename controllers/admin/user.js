@@ -199,8 +199,7 @@ exports.adminInfo = async ctx => {
     // } )
 };
 exports.adminRegister = async ctx => {
-    console.log( "========", ctx.request.query )
-    let json = ctx.body
+    let json = ctx.request.body
     let { error, data } = Validator( json, {
         "username": {
             "type": String,
@@ -257,8 +256,7 @@ exports.adminRegister = async ctx => {
     } )
 };
 exports.adminUpdate = async ctx => {
-    console.log( "========", ctx.request.query )
-    let json = ctx.body
+    let json = ctx.request.body
     let id = ctx.params.id
     let { error, data } = Validator( json, {
         "username": {
@@ -287,7 +285,7 @@ exports.adminUpdate = async ctx => {
         "is_deleted": {
             "type": Number,
             "default": 1
-        },
+        }
     } )
     if (error){
         ctx.body = {
@@ -304,11 +302,11 @@ exports.adminUpdate = async ctx => {
         email: email,
         is_deleted: is_deleted
     } )
-    await User.update( { db, where: { id: id } } ).then( result => {
+    await User.update( db, { where: { id: id } } ).then( result => {
         ctx.body = {
             code: 200,
             message: "操作成功",
-            data: result
+            data: ""
         }
         return;
     } ).catch( err => {
@@ -407,7 +405,210 @@ exports.rolelistAll = async ctx => {
         return;
     }
 }
-exports.rolelist = async ctx => {
+exports.menuTreeList = async ctx => {
+    let json = ctx.request.body
+    let { error, data } = Validator( json, {
+        "user_id": {
+            "type": Number,
+            "name": "用户id",
+            "allowNull": false
+        },
+        "role_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": false
+        }
+    } )
+    if (error){
+        ctx.body = {
+            ErrCode: 1000,
+            ErrMsg: error
+        }
+        return;
+    }
+    // let { prohibit,id } = data;
+    await User_role.create( data ).then( db => {
+        ctx.body = {
+            ErrCode: 0,
+            ErrMsg: "",
+            msg: '创建成功'
+        }
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
+exports.menuList = async ctx => {
+    let json = ctx.request.query
+    // let id = ctx.params.id
+    var { error, data } = Validator( json, {
+        "pageNum": {
+            "type": Number,
+            "name": "",
+            "allowNull": true,
+            "default": 1
+        },
+        "pageSize": {
+            "type": Number,
+            "allowNull": true,
+            "default": 10
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let { pageNum, pageSize } = data
+    let where = FilterNull( {
+        // phone: phone,
+        // name: username,
+    } )
+    await Menu.findAndCountAll( {
+        where,
+        offset: (pageNum - 1) * pageSize,
+        limit: pageSize
+    } ).then( db => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: {
+                pageNum: pageNum,
+                pageSize: pageSize,
+                total: db.count,
+                totalPage: Math.ceil( db.count / pageSize ),
+                list: db.rows
+            }
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
+exports.menuCreate = async ctx => {
+    let json = ctx.request.body
+    let { error, data } = Validator( json, {
+        "menu": {
+            "type": String,
+            "name": "名称",
+            "allowNull": false
+        },
+        "style": {
+            "type": String,
+            "name": "icon",
+            "allowNull": false
+        },
+        "url": {
+            "type": String,
+            "name": "路径",
+            "allowNull": true
+        },
+        "sort": {
+            "type": Number,
+            "name": "排序",
+            "allowNull": false
+        },
+        "hidden": {
+            "type": Number,
+            "name": "是否显示标识",
+            "default": 1
+        },
+        "parent_id": {
+            "type": Number,
+            "name": "父级id"
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let { menu, style, url, sort, hidden, parent_id } = data
+    let db = FilterNull( {
+        menu: menu,
+        style: style,
+        url: url,
+        sort: sort,
+        parent_id: parent_id,
+        hidden: hidden
+    } )
+    await Menu.create( db ).then( result => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: ""
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
+exports.menuUpdate = async ctx => {
+    let json = ctx.request.body
+    let id = ctx.params.id
+    let { error, data } = Validator( json, {
+        "menu": {
+            "type": String,
+            "name": "名称",
+            "allowNull": false
+        },
+        "style": {
+            "type": String,
+            "name": "icon",
+            "allowNull": false
+        },
+        "url": {
+            "type": String,
+            "name": "路径",
+            "allowNull": true
+        },
+        "sort": {
+            "type": Number,
+            "name": "排序",
+            "allowNull": false
+        },
+        "hidden": {
+            "type": Number,
+            "name": "是否显示标识",
+            "default": 1
+        },
+        "parent_id": {
+            "type": Number,
+            "name": "父级id"
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: "操作失败",
+            data: ""
+        }
+        return;
+    }
+    let { menu, style, url, sort, hidden, parent_id } = data
+    let db = FilterNull( {
+        menu: menu,
+        style: style,
+        url: url,
+        sort: sort,
+        parent_id: parent_id,
+        hidden: hidden
+    } )
+    await Menu.update( db, { where: { id: id } } ).then( db => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: ""
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
+exports.roleList = async ctx => {
     let json = ctx.params
     let { error, data } = Validator( json, {
         "pageNum": {
@@ -453,98 +654,85 @@ exports.rolelist = async ctx => {
         ctx.throw( err )
     } )
 }
-exports.menuTreeList = async ctx => {
+exports.roleCreate = async ctx => {
     let json = ctx.request.body
     let { error, data } = Validator( json, {
-        "user_id": {
-            "type": Number,
-            "name": "用户id",
+        "role_name": {
+            "type": String,
+            "name": "角色名称",
             "allowNull": false
         },
-        "role_id": {
+        "roleDesc": {
+            "type": String,
+            "allowNull": true
+        },
+        "is_deleted": {
             "type": Number,
-            "name": "角色id",
-            "allowNull": false
+            "default": 1
         }
     } )
     if (error){
         ctx.body = {
-            ErrCode: 1000,
-            ErrMsg: error
+            code: 201,
+            message: error
         }
         return;
     }
-    // let { prohibit,id } = data;
-    await User_role.create( data ).then( db => {
+    let { role_name, roleDesc, is_deleted } = data;
+    let where = FilterNull( {
+        role_name: role_name,
+        roleDesc: roleDesc,
+        is_deleted: is_deleted
+    } )
+    await Role.create( where ).then( db => {
         ctx.body = {
-            ErrCode: 0,
-            ErrMsg: "",
-            msg: '创建成功'
+            code: 200,
+            message: "操作成功",
+            data: db
         }
+        return;
     } ).catch( err => {
         ctx.throw( err )
     } )
 }
-exports.menuCreate = async ctx => {
+exports.roleUpdate = async ctx => {
+    let id = ctx.params.id
     let json = ctx.request.body
     let { error, data } = Validator( json, {
-        "user_id": {
-            "type": Number,
-            "name": "用户id",
+        "role_name": {
+            "type": String,
+            "name": "角色名称",
             "allowNull": false
         },
-        "role_id": {
+        "roleDesc": {
+            "type": String,
+            "allowNull": true
+        },
+        "is_deleted": {
             "type": Number,
-            "name": "角色id",
-            "allowNull": false
+            "default": 1
         }
     } )
     if (error){
         ctx.body = {
-            ErrCode: 1000,
-            ErrMsg: error
+            code: 201,
+            message: error
         }
         return;
     }
-    // let { prohibit,id } = data;
-    await User_role.create( data ).then( db => {
-        ctx.body = {
-            ErrCode: 0,
-            ErrMsg: "",
-            msg: '创建成功'
-        }
-    } ).catch( err => {
-        ctx.throw( err )
+    let { role_name, roleDesc, is_deleted } = data;
+    let db = FilterNull( {
+        role_name: role_name,
+        roleDesc: roleDesc,
+        is_deleted: is_deleted
     } )
-}
-exports.menuUpdate = async ctx => {
-    let json = ctx.request.body
-    let { error, data } = Validator( json, {
-        "user_id": {
-            "type": Number,
-            "name": "用户id",
-            "allowNull": false
-        },
-        "role_id": {
-            "type": Number,
-            "name": "角色id",
-            "allowNull": false
-        }
-    } )
-    if (error){
+    await Role.update( db, { where: { id: id } } ).then( db => {
         ctx.body = {
-            ErrCode: 1000,
-            ErrMsg: error
+            code: 200,
+            message: "操作成功",
+            data: db
         }
         return;
-    }
-    // let { prohibit,id } = data;
-    await User_role.create( data ).then( db => {
-        ctx.body = {
-            ErrCode: 0,
-            ErrMsg: "",
-            msg: '创建成功'
-        }
     } ).catch( err => {
         ctx.throw( err )
     } )
