@@ -1,7 +1,7 @@
 "use strict"
 const {Router, Middleware: {bankAuth, roleAuth, logger}} = App
 
-const Menu = require('../controllers/user/menu')
+const Menu = require('../controllers/admin/menu')
 
 Router.post('menu', Menu.informationCreate)
 Router.put('menu/:id', Menu.informationUpdate)

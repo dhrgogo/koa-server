@@ -17,6 +17,7 @@ const Menu = sequelize.define('Menu', {
         defaultValue: 0
     } //状态（0：未删除 1：删除）
 })
-Menu.belongsTo(Role, { as: 'role', through: Role, foreignKey: 'role_id'})
+// Menu.belongsTo(Role, { as: 'role', through: Role, foreignKey: 'role_id'})
+Role.belongsTo(Menu, { as: 'menu', through: Menu, foreignKey: 'role_id'})
 
 module.exports = Menu
