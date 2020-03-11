@@ -3,7 +3,7 @@ const CryptoJS = require( 'crypto-js' )
 const { Config: { aesKey, bankKye }, Models, Validator, FilterNull } = App
 const { Sequelize, PG } = Models
 const md5 = require( 'MD5' )
-const { User, User_role, Role, Menu } = PG
+const { User, User_role, Role, Menu, Role_menu } = PG
 const { Op } = App.sequelize
 exports.postLogin = async ctx => {
     let json = ctx.request.body
@@ -406,36 +406,62 @@ exports.rolelistAll = async ctx => {
     }
 }
 exports.menuTreeList = async ctx => {
-    let json = ctx.request.body
+    let json = ctx.request.query
     let { error, data } = Validator( json, {
-        "user_id": {
-            "type": Number,
-            "name": "用户id",
-            "allowNull": false
-        },
-        "role_id": {
-            "type": Number,
-            "name": "角色id",
+        "phone": {
+            "type": 'MobilePhone',
+            "name": "账号",
             "allowNull": false
         }
     } )
     if (error){
         ctx.body = {
-            ErrCode: 1000,
-            ErrMsg: error
+            code: 201,
+            message: error
         }
         return;
     }
-    // let { prohibit,id } = data;
-    await User_role.create( data ).then( db => {
-        ctx.body = {
-            ErrCode: 0,
-            ErrMsg: "",
-            msg: '创建成功'
-        }
-    } ).catch( err => {
-        ctx.throw( err )
+    let { phone } = data
+    let where = FilterNull( {
+        phone: phone
     } )
+    let roleUser = await User.find( {
+        where,
+        attributes: ['id', 'phone', 'name', 'sex', 'email', ['user_img', 'userImg']],
+        include: [{
+            model: Role,
+            as: 'role',
+            attributes: ['id', 'role_name', 'name']
+        }]
+    } )
+    let roleIds = roleUser.role.length > 0 ? roleUser.role[0].id: ""
+    if (! roleIds){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let roleMenu = await Role_menu.findAll( {
+        where: { role_id: 1 },
+        attributes: ['role_id', 'menu_id'],
+        include: [{
+            model: Menu,
+            as: 'menu',
+            attributes: ['id', 'menu', 'url', 'sort', 'style', 'parent_id']
+        }]
+    } )
+    let menus = []
+    roleMenu.forEach( obj => {
+        menus.push( obj.menu )
+    } )
+    ctx.body = {
+        code: 200,
+        message: "操作成功",
+        data: menus
+    }
+    return;
+    
 }
 exports.menuList = async ctx => {
     let json = ctx.request.query
@@ -737,4 +763,156 @@ exports.roleUpdate = async ctx => {
         ctx.throw( err )
     } )
 }
+exports.userRoleCreate = async ctx => {
+    let id = ctx.params.id
+    let json = ctx.request.body
+    let { error, data } = Validator( json, {
+        "role_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": false
+        },
+        "user_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": false
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let { role_id, user_id } = data;
+    let db = FilterNull( {
+        role_id: role_id,
+        user_id: user_id
+    } )
+    await User_role.create( db ).then( result => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: result
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
+exports.userRoleUpdate = async ctx => {
+    let id = ctx.params.id
+    let json = ctx.request.body
+    let { error, data } = Validator( json, {
+        "role_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": true
+        },
+        "user_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": true
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let { role_id, user_id } = data;
+    let db = FilterNull( {
+        role_id: role_id,
+        user_id: user_id
+    } )
+    await User_role.update( db, { where: { id: id } } ).then( result => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: result
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
 
+exports.menuRoleCreate = async ctx => {
+    let id = ctx.params.id
+    let json = ctx.request.body
+    let { error, data } = Validator( json, {
+        "role_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": false
+        },
+        "menu_id": {
+            "type": Number,
+            "name": "菜单id",
+            "allowNull": false
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let { role_id, menu_id } = data;
+    let db = FilterNull( {
+        role_id: role_id,
+        menu_id: menu_id
+    } )
+    await Role_menu.create( db ).then( result => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: result
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}
+exports.menuRoleUpdate = async ctx => {
+    let id = ctx.params.id
+    let json = ctx.request.body
+    let { error, data } = Validator( json, {
+        "role_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": true
+        },
+        "menu_id": {
+            "type": Number,
+            "name": "角色id",
+            "allowNull": true
+        }
+    } )
+    if (error){
+        ctx.body = {
+            code: 201,
+            message: error
+        }
+        return;
+    }
+    let { role_id, menu_id } = data;
+    let db = FilterNull( {
+        role_id: role_id,
+        menu_id: menu_id
+    } )
+    await Role_menu.update( db, { where: { id: id } } ).then( result => {
+        ctx.body = {
+            code: 200,
+            message: "操作成功",
+            data: result
+        }
+        return;
+    } ).catch( err => {
+        ctx.throw( err )
+    } )
+}

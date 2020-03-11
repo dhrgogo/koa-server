@@ -4,6 +4,7 @@ const {STRING, INTEGER, ARRAY, TEXT, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} 
 const User = require('./user')
 const Role = require('./role')
 const User_role = sequelize.define('User_role', {
+    id: { type: INTEGER, primaryKey: true, autoIncrement: true },//-------------角色ID
     user_id: {type: INTEGER},//------------用户ID
     role_id: {type: INTEGER} //-------------角色I
 })

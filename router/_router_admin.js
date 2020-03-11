@@ -38,5 +38,11 @@ Router.post('menu/update/:id', Admin.menuUpdate)
 Router.get('role/list/', Admin.roleList)
 Router.post('role/create/', Admin.roleCreate)
 Router.post('role/update/:id', Admin.roleUpdate)
+// 用户角色设置权限
+Router.post('user/role/create/', Admin.userRoleCreate)
+Router.post('user/role/update/:id', Admin.userRoleUpdate)
+// 角色菜单设置权限
+Router.post('menu/role/create/', Admin.menuRoleCreate)
+Router.post('menu/role/update/:id', Admin.menuRoleUpdate)
 
 Router.get('role/listAll/', Admin.rolelistAll)

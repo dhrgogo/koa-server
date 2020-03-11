@@ -13,6 +13,7 @@ const Role = require('./sequelize/role')
 const Role_permission = require('./sequelize/role_permission')
 const User = require('./sequelize/user')
 const User_role = require('./sequelize/user_role')
+const Role_menu = require('./sequelize/role_menu')
 
 // sequelize.sync({force: true})
 sequelize.sync({force: false})
@@ -24,6 +25,7 @@ module.exports = {
         Role,
         Role_permission,
         User,
-        User_role
+        User_role,
+        Role_menu
     }
 }

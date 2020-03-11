@@ -4,6 +4,7 @@ const {STRING, INTEGER, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} = Sequelize
 let Role = sequelize.define('Role', {
     unique_id: {type: INTEGER}, //唯一id
     role_name: {type: STRING},// -------角色名称
+    name: {type: STRING},// -------角色名称
     roleDesc: {type: STRING},// -------角色描述
     is_deleted: {
         type: INTEGER,

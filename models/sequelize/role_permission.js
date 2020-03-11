@@ -4,6 +4,7 @@ const {STRING, INTEGER, ARRAY, TEXT, JSON, JSONB, DOUBLE, RANGE, DATE, BOOLEAN} 
 const Permission = require('./permission')
 const Role = require('./role')
 const Role_permission = sequelize.define('Role_permission', {
+    id: { type: INTEGER, primaryKey: true, autoIncrement: true },//-------------角色ID
     role_id: {type: INTEGER},//-------------角色ID
     permission_id: {type: INTEGER},//----权限ID
     is_deleted: {
