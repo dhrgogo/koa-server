@@ -42,7 +42,7 @@
     "nodemailer": "^4.2.0",
     "pg": "^6.4.2",
     "pg-hstore": "^2.3.2",
-    "pug": "^2.0.0-rc.1",
+    "pug": "^3.0.1",
     "query-string": "^4.3.4",
     "redis": "^2.7.1",
     "request-promise": "^4.2.1",
