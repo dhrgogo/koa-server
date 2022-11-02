@@ -22,7 +22,7 @@
     "fecha": "^2.3.1",
     "filter-null": "^1.2.0",
     "float-arithmetic": "^1.0.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-ssh": "^0.7.0",
     "jsonwebtoken": "^7.4.0",
     "koa": "^2.4.1",
